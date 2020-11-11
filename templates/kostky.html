@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body style="background-image: url('https://www.collinsdictionary.com/images/full/dice_393025615_1000.jpg');">
+    <center>
+    <h1>Hra Kostky</h1>
+    <p style="font-size: 20px;">Hráč: {{hod}}</p>
+    <img src="/static/{{hod}}.png" height="250px" width="250px">
+    <br>
+    <p style="font-size: 20px;">Počítač: {{bhod}}</p>
+    <img src="/static/{{bhod}}.png" height="250px" width="250px">
+    <br>
+    <button type = "submit" name = "learn" value = "myimage" onClick="window.location.reload();">
+        <p style="font-size: 20px;">HÁZEJ</p>
+        <img src="/static/hazej.png" height="100px" width="100px"/>
+     </button>
+    <br>
+    <table>
+        <tr>
+            <th style="font-size: 20px;">Hráč</th>
+            <th style="font-size: 20px;">Počítač</th>
+        </tr>
+        <tr>
+            <td style="font-size: 20px;">{{vysledek[0]}}</td>
+            <td style="font-size: 20px;">{{vysledek[1]}}</td>
+        </tr>
+    </table>
+    </center>
+</body>
+
+</html>
