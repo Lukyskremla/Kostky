@@ -1,13 +1,16 @@
 from flask import Flask, render_template
 import random
 import sqlite3
+import os
 
 app = Flask(__name__)
 
+aktualni_adresar = os.path.abspath(os.path.dirname(__file__))
+databaze = os.path.join(aktualni_adresar, 'database.db')
 
 @app.route("/")
 def hello_world():
-    conn = sqlite3.connect("database.db")
+    conn = sqlite3.connect(databaze)
     hod = random.randint(1, 6)
     bot_hod = random.randint(1, 6)
     print(hod)
